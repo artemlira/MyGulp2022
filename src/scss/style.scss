@@ -1,0 +1,24 @@
+@import "fonts";
+
+body {
+   font-family: CormorantInfant;
+   background: url('@img/img2.jpg') 0 0 no-repeat;
+
+   span {
+      color: red;
+   }
+
+   // background: url('@img/img2.jpg') 0 0 no-repeat;
+}
+
+@media(max-width: 768px) {
+   span {
+      font-size: 20px;
+   }
+}
+
+@media(max-width: 768px) {
+   body {
+      background-color: green;
+   }
+}
