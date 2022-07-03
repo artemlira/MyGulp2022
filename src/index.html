@@ -5,15 +5,14 @@
 })
 
 <body>
-   @@include('html/header.html',{})
-   <main>
-      <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas quos ad voluptate expedita sapiente. Minus
-         nesciunt ipsa, quae itaque sequi molestiae, inventore doloribus delectus non voluptatum voluptate laudantium,
-         totam ratione!</span>
+   <div class="wrapper">
+      @@include('html/header.html',{})
+      <main class="page">
 
-   </main>
-   @@include('html/footer.html',{})
-   <script src="js/app.min.js"></script>
+      </main>
+      @@include('html/footer.html',{})
+   </div>
+   @@include('html/js.html', {})
 </body>
 
 </html>

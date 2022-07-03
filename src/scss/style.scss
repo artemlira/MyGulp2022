@@ -1,24 +1,48 @@
 @import "fonts";
 
-body {
-   font-family: Pragmaticashadowc italic;
-   background: url('@img/img2.jpg') 0 0 no-repeat;
 
-   span {
-      color: red;
-   }
 
-   // background: url('@img/img2.jpg') 0 0 no-repeat;
+// Шрифт по умолчанию================================================================
+$fontFamily: " ";
+
+
+//Переменные=========================================================================
+$minWidth: 320px;
+$maxWidth: 1152;
+$maxWidthContainer: 856;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+
+//Оболочка=========================================================================
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+
+   // &._loaded {}
 }
 
-@media(max-width: 768px) {
-   span {
-      font-size: 20px;
-   }
-}
 
-@media(max-width: 768px) {
-   body {
-      background-color: green;
+//основная сетка====================================================================
+._container {
+   max-width: $maxWidthContainer + px;
+   margin: 0 auto;
+
+   @media (max-width: $md1) {
+      max-width: 970px;
+   }
+
+   @media (max-width: $md2) {
+      max-width: 750px;
+   }
+
+   @media (max-width: $md3) {
+      max-width: none;
+      padding: 0 10px;
    }
 }
