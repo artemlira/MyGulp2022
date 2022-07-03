@@ -3,7 +3,7 @@ import plumber from "gulp-plumber"// Обработка шибок
 import notify from "gulp-notify" // Сщщбщение (подсказки)
 import browsersync from "browser-sync";// Локальный сервер
 import newer from "gulp-newer"; // Проверка обновлений
-import ifPlugin from "gulp-if" // условное ветвление
+import ifPlugin from "gulp-if"; // условное ветвление
 
 
 //Экспортируем объект
