@@ -47,8 +47,13 @@ export const scss = () => {
          )
 
       )
-      // Закоментировать если НЕ НУЖЕН не сжатый дубль стилей
-      .pipe(app.gulp.dest(app.path.build.css))
+      // Закоментировать если НЕ НУЖЕН не сжатый дубль стилей. По умолчанию он создается только в режиме dev
+      .pipe(
+         app.plugins.if(
+            app.isDev,
+            app.gulp.dest(app.path.build.css)
+         )
+      )
       // Раскоментровать если НУЖЕН не сжатый дубль стилей
       .pipe(
          app.plugins.if(
