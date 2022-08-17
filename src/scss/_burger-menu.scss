@@ -1,0 +1,80 @@
+.menu__icon {
+   display: none;
+   position: relative;
+   width: rem(45px);
+   height: rem(35px);
+
+   span {
+      top: calc(50% - 1px);
+   }
+
+   &::after,
+   &::before,
+   & span {
+      display: block;
+      content: "";
+      width: 100%;
+      height: rem(3px);
+      background-color: $color3;
+      position: absolute;
+      left: 0;
+   }
+
+   &::after {
+      top: 0;
+   }
+
+   &::before {
+      bottom: 0;
+   }
+}
+
+.menu__icon.active {
+   span {
+      display: none;
+   }
+
+   &::after {
+      transform: rotate(-140deg);
+      top: 18px;
+   }
+
+   &::before {
+      transform: rotate(140deg);
+      bottom: 14px;
+   }
+}
+
+.burger__wrapper {
+   display: none;
+}
+
+.burger__menu {
+   position: fixed;
+   top: rem(50px);
+   left: 0;
+   right: 0;
+   width: 100%;
+   background-color: rgba(125, 180, 176, 0.85);
+   transform: translateX(100%);
+   transition: all 0.8s;
+
+}
+
+.burger__menu.active {
+   transform: translateX(0);
+}
+
+.burger-nav {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: rem(30px);
+   margin: rem(30px) 0;
+}
+
+.burger-link {
+   // font-family: "Proxima Nova";
+   // font-size: rem(24px);
+}

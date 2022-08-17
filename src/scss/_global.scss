@@ -17,20 +17,20 @@
 }
 
 //основная сетка====================================================================
-._container {
+.container {
    max-width: $maxWidthContainer + px;
    margin: 0 auto;
 
-   @media (max-width: $md1) {
-      max-width: 970px;
+   @include netbook {
+      max-width: $netbook + px;
    }
 
-   @media (max-width: $md2) {
-      max-width: 750px;
+   @include tablet {
+      max-width: $tablet + px;
    }
 
-   @media (max-width: $md3) {
+   @include phone {
       max-width: none;
-      padding: 0 10px;
+      padding: 0 rem(10px);
    }
 }
