@@ -18,10 +18,13 @@ $phone: 479.98;
 // Шрифт по умолчанию================================================================
 $fontFamily: " ";
 
+
+//функция перевода в rem
 @function rem($size) {
-   @return $size / $root-font-size * 1rem;
+   @return $size / 16px * 1rem;
 }
 
+//функция перевода в %
 @function pr($sizeBox , $size) {
    @return $size/$sizeBox*100%;
 }
