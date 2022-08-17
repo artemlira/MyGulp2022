@@ -3,15 +3,49 @@ $minWidth: 320px;
 $maxWidth: 1152;
 $maxWidthContainer: 856;
 $md1: $maxWidthContainer + 12;
-$md2: 991.98;
-$md3: 767.98;
-$md4: 479.98;
+$netbook: 991.98;
+$tablet: 767.98;
+$phone: 479.98;
 
-$color1: #FFFFFF;
-$color2: #CC9900;
-$color3: #4C4C4C;
-$color4: #C89F2D;
-$color5: #9B9B9B;
+// цвета в макете
+
+// $color1: ;
+// $color2: ;
+// $color3: ;
+// $color4: ;
+// $color5: ;
 
 // Шрифт по умолчанию================================================================
 $fontFamily: " ";
+
+@function rem($size) {
+   @return $size / $root-font-size * 1rem;
+}
+
+@function pr($sizeBox , $size) {
+   @return $size/$sizeBox*100%;
+}
+
+@mixin notebook {
+   @media screen and (max-width:1260px) {
+      @content;
+   }
+}
+
+@mixin netbook {
+   @media screen and (max-width:992px) {
+      @content;
+   }
+}
+
+@mixin tablet {
+   @media screen and (max-width:768px) {
+      @content;
+   }
+}
+
+@mixin phone {
+   @media screen and (max-width:480px) {
+      @content;
+   }
+}
