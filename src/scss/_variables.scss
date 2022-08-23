@@ -21,7 +21,7 @@ $fontFamily: " ";
 
 //функция перевода в rem
 @function rem($size) {
-   @return $size / 16px * 1rem;
+   @return calc($size / 16px * 1rem);
 }
 
 //функция перевода в %
