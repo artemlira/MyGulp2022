@@ -6,8 +6,7 @@
    "type": "module",
    "scripts": {
       "dev": "gulp",
-      "build": "gulp build --build",
-      "zip": "gulp deployZIP --build"
+      "build": "gulp build --build"
    },
    "author": "Lira",
    "license": "ISC",

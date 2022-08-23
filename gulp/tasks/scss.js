@@ -21,12 +21,7 @@ export const scss = () => {
       .pipe(sass({
          outputStyle: 'expanded'
       }))
-      .pipe(
-         app.plugins.if(
-            app.isBuild,
-            groupCssMediaQueries()
-         )
-      )
+      .pipe(groupCssMediaQueries())
       .pipe(
          app.plugins.if(
             app.isBuild,
@@ -37,16 +32,10 @@ export const scss = () => {
             })
          )
       )
-      .pipe(
-         app.plugins.if(
-            app.isBuild,
-            webpcss({
-               webpClass: ".webp",
-               noWebpClass: ".no-webp"
-            })
-         )
-
-      )
+      .pipe(webpcss({
+         webpClass: ".webp",
+         noWebpClass: ".no-webp"
+      }))
       // Закоментировать если НЕ НУЖЕН не сжатый дубль стилей. По умолчанию он создается только в режиме dev
       .pipe(
          app.plugins.if(
