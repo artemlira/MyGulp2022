@@ -43,18 +43,18 @@ export const ttfToWoff = () => {
 }
 
 export const fontsStyle = () => {
-   // файл стилей подключения шрифтов
+   //Файл стилей подключения шрифтов
    let fontsFile = `${app.path.srcFolder}/scss/fonts.scss`;
-   // проверяем существуют ли файлы шрифтов
+   //Проверяем, существуют ли файлы шрифтов
    fs.readdir(app.path.build.fonts, function (err, fontsFiles) {
       if (fontsFiles) {
-         // проверяем существуют ли файлы стилей для подключения шрифтов
+         //Проверяем, существует ли файл стилей для подключения шрифтов
          if (!fs.existsSync(fontsFile)) {
-            //если файла нет, создем его
+            //Если файла нет, создаём его
             fs.writeFile(fontsFile, '', cb);
             let newFileOnly;
             for (let i = 0; i < fontsFiles.length; i++) {
-               // записываем подключения шрифтов в файл стилей
+               //Записываем подключения шрифтов в файл стилей
                let fontFileName = fontsFiles[i].split('.')[0];
                if (newFileOnly !== fontFileName) {
                   let fontName = fontFileName.split('-')[0] ? fontFileName.split('-')[0] : fontFileName;
@@ -78,17 +78,14 @@ export const fontsStyle = () => {
                   } else {
                      fontWeight = 400;
                   }
-                  fs.appendFile(fontsFile,
-                     `@font-face {\n\tfont-family: ${fontName}; \n\tfont-display: swap; \n\tsrc: url("../fonts/${fontFileName}.woff2") format("woff2"), url("../fonts/${fontFileName}.woff") format("woff"); \n\tfont-weight: ${fontWeight}; \n\tfont-style: normal;\n}\r\n`
-                     , cb);
-
+                  fs.appendFile(fontsFile, `@font-face{\n\tfont-family: ${fontName};\n\tfont-display: swap;\n\tsrc: url("../fonts/${fontFileName}.woff2") format("woff2"), url("../fonts/${fontFileName}.woff") format("woff");\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n}\r\n`, cb);
                   newFileOnly = fontFileName;
                }
             }
          } else {
-            console.log('Файл scss/fonts.scss уже существует. Для обновления файла нужно его удалить');
+            //Если файл есть, выводим сообщение
+            console.log("Файл scss/fonts.scss уже существует. Для обновления файла нужно его удалить!");
          }
-
       }
    });
    return app.gulp.src(`${app.path.srcFolder}`);
