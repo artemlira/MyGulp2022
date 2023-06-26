@@ -1,7 +1,9 @@
 // @import "fonts";
 @import "reset";
 @import "variables";
-@import "global";
-@import "header";
-// @import "burger-menu";  //для меню бургера
+@import "./global";
+@import "./header";
+@import "./accordion";
+@import "burger-menu";  //для меню бургера
+@import '../components/Form Mailer/form.scss'; //Для отправки форм
 @import "footer";

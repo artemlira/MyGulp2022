@@ -1,0 +1,56 @@
+<div class="form-wrapper">
+  <form
+    method="POST"
+    action="sendmail/sendmail.php"
+    enctype="multipart/form-data"
+    class="form"
+  >
+    <input required type="text" placeholder="Name" name="name" class="form__input" />
+    <input required type="email" placeholder="E-mail" name="email" class="form__input" />
+    <div class="form__options options-form">
+      <h4 class="options-form_title">Some title</h4>
+      <label for="" class="options-form__item">
+        <input
+          checked
+          type="radio"
+          name="like"
+          value="Yes!"
+          class="options-form__input"
+        />
+        <span class="options-form__text">Yes!</span>
+      </label>
+      <label for="" class="options-form__item">
+        <input
+          checked
+          type="radio"
+          name="like"
+          value="No!"
+          class="options-form__input"
+        />
+        <span class="options-form__text">No!</span>
+      </label>
+    </div>
+    <textarea
+      name="message"
+      placeholder="Message"
+      class="form__input"
+    ></textarea>
+    <div class="form__file file-form">
+      <label class="file-form__item">
+        <input
+          name="image"
+          type="file"
+          accept=".jpg, .png, .jpeg"
+          class="file-form__input"
+        />
+        <div class="file-form__button button">Choose file!</div>
+      </label>
+      <div class="file-form__name"></div>
+    </div>
+    <label class="form__checkbox checkbox-form">
+      <input required type="checkbox" name="thebest" class="checkbox-form__input" />
+      <span class="checkbox-form__text">Some choise</span>
+    </label>
+    <button class="form__button button">SEND</button>
+  </form>
+</div>

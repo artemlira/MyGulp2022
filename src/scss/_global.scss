@@ -1,37 +1,52 @@
 * {
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
-   scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
 
-//Оболочка=========================================================================
+//==================== Оболочка ====================
 .wrapper {
-   width: 100%;
-   min-height: 100%;
-   overflow: hidden;
-   display: flex;
-   flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
-   // &._loaded {}
+  // &._loaded {}
 }
 
-//основная сетка====================================================================
+//==================== Анимация ====================
+// fade
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+//==================== основная сетка ====================
 .container {
-   max-width: $maxWidthContainer + px;
-   margin: 0 auto;
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
 
-   @include netbook {
-      max-width: $netbook + px;
-   }
+  @include netbook {
+    max-width: $netbook + px;
+  }
 
-   @include tablet {
-      max-width: $tablet + px;
-   }
+  @include tablet {
+    max-width: $tablet + px;
+  }
 
-   @include phone {
-      max-width: none;
-      padding: 0 rem(10px);
-   }
+  @include phone {
+    max-width: none;
+    padding: 0 rem(10px);
+  }
 }

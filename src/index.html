@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-@@include('html/_head.html', {
-"title":"Главная"
-})
+<html lang="ru">
+  @@include('html/_head.html', { "title":"Название сайта" })
 
-<body>
-   <div class="wrapper">
+  <body>
+    <div class="wrapper">
       @@include('html/_header.html',{})
       <main class="page">
-
+        @@include('./components/Form Mailer/form.html', {})
       </main>
       @@include('html/_footer.html',{})
-   </div>
-   @@include('html/_js.html', {})
-</body>
-
+    </div>
+    @@include('html/_js.html', {})
+  </body>
 </html>

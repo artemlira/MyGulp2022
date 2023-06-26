@@ -3,9 +3,13 @@ $minWidth: 320px;
 $maxWidth: 1152;
 $maxWidthContainer: 856;
 $md1: $maxWidthContainer + 12;
-$netbook: 991.98;
+$netbook: 991.98 + px;
 $tablet: 767.98;
 $phone: 479.98;
+$burgerBreakpoint: $netbook;
+$burgerColor: #131418;
+$burgerActiveColor: #fefefe;
+
 
 // цвета в макете
 
