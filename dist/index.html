@@ -1,154 +1,85 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.min.css" />
-    <title>Название сайта</title>
-  </head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.min.css">
+   <title>Название сайта</title>
+</head>
 
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="header__content container">
-          <div class="navbar">
-            <!-- logo -->
-            <div class="logo">
-              <a href="/">logo</a>
-            </div>
-            <!-- menu PC  -->
-            <nav class="menu">
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a href="/" class="menu__item_link">1 item</a>
-                </li>
-                <li class="menu__item">
-                  <a href="/" class="menu__item_link">2 item</a>
-                </li>
-                <li class="menu__item">
-                  <a href="/" class="menu__item_link">3 item</a>
-                </li>
-                <li class="menu__item">
-                  <a href="/" class="menu__item_link">4 item</a>
-                </li>
-                <li class="menu__item">
-                  <a href="/" class="menu__item_link">5 item</a>
-                </li>
-                <li class="menu__item">
-                  <a href="/" class="menu__item_link">6 item</a>
-                </li>
-              </ul>
-            </nav>
-            <!-- menu Mobile  -->
-            <nav class="menu__mobile">
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a href="/" class="menu__item_link">1 item</a>
-                </li>
-                <li class="menu__item">
-                  <a href="/" class="menu__item_link">2 item</a>
-                </li>
-                <li class="menu__item">
-                  <a href="/" class="menu__item_link">3 item</a>
-                </li>
-                <li class="menu__item">
-                  <a href="/" class="menu__item_link">4 item</a>
-                </li>
-                <li class="menu__item">
-                  <a href="/" class="menu__item_link">5 item</a>
-                </li>
-                <li class="menu__item">
-                  <a href="/" class="menu__item_link">6 item</a>
-                </li>
-              </ul>
-            </nav>
-            <!-- burger button -->
-            <button class="burger">
-              <span></span>
-            </button>
-          </div>
-        </div>
-      </header>
+  <div class="header__content container">
+    <div class="navbar">
+      <!-- logo -->
+      <div class="logo">
+        <a href="/">logo</a>
+      </div>
+      <!-- menu PC  -->
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="/" class="menu__item_link">1 item</a>
+          </li>
+          <li class="menu__item">
+            <a href="/" class="menu__item_link">2 item</a>
+          </li>
+          <li class="menu__item">
+            <a href="/" class="menu__item_link">3 item</a>
+          </li>
+          <li class="menu__item">
+            <a href="/" class="menu__item_link">4 item</a>
+          </li>
+          <li class="menu__item">
+            <a href="/" class="menu__item_link">5 item</a>
+          </li>
+          <li class="menu__item">
+            <a href="/" class="menu__item_link">6 item</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- menu Mobile  -->
+      <nav class="menu-mobile">
+        <ul class="menu-mobile__list">
+          <li class="menu-mobile__item">
+            <a href="/" class="menu-mobile__item_link">1 item</a>
+          </li>
+          <li class="menu-mobile__item">
+            <a href="/" class="menu-mobile__item_link">2 item</a>
+          </li>
+          <li class="menu-mobile__item">
+            <a href="/" class="menu-mobile__item_link">3 item</a>
+          </li>
+          <li class="menu-mobile__item">
+            <a href="/" class="menu-mobile__item_link">4 item</a>
+          </li>
+          <li class="menu-mobile__item">
+            <a href="/" class="menu-mobile__item_link">5 item</a>
+          </li>
+          <li class="menu-mobile__item">
+            <a href="/" class="menu-mobile__item_link">6 item</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- burger button -->
+      <div class="burger">
+        <span></span>
+      </div>
+    </div>
+  </div>
+</header>
 
       <main class="page">
-        <div class="form-wrapper">
-          <form
-            method="POST"
-            action="sendmail/sendmail.php"
-            enctype="multipart/form-data"
-            class="form"
-          >
-            <input
-              required
-              type="text"
-              placeholder="Name"
-              name="name"
-              class="form__input"
-            />
-            <input
-              required
-              type="email"
-              placeholder="E-mail"
-              name="email"
-              class="form__input"
-            />
-            <div class="form__options options-form">
-              <h4 class="options-form_title">Some title</h4>
-              <label for="" class="options-form__item">
-                <input
-                  checked
-                  type="radio"
-                  name="like"
-                  value="Yes!"
-                  class="options-form__input"
-                />
-                <span class="options-form__text">Yes!</span>
-              </label>
-              <label for="" class="options-form__item">
-                <input
-                  checked
-                  type="radio"
-                  name="like"
-                  value="No!"
-                  class="options-form__input"
-                />
-                <span class="options-form__text">No!</span>
-              </label>
-            </div>
-            <textarea
-              name="message"
-              placeholder="Message"
-              class="form__input"
-            ></textarea>
-            <div class="form__file file-form">
-              <label class="file-form__item">
-                <input
-                  name="image"
-                  type="file"
-                  accept=".jpg, .png, .jpeg"
-                  class="file-form__input"
-                />
-                <div class="file-form__button button">Choose file!</div>
-              </label>
-              <div class="file-form__name"></div>
-            </div>
-            <label class="form__checkbox checkbox-form">
-              <input
-                required
-                type="checkbox"
-                name="thebest"
-                class="checkbox-form__input"
-              />
-              <span class="checkbox-form__text">Some choise</span>
-            </label>
-            <button class="form__button button">SEND</button>
-          </form>
-        </div>
+       
       </main>
       <footer class="footer">
-        <div class="footer__contant container"></div>
-      </footer>
+   <div class="footer__contant container">
+
+
+   </div>
+</footer>
     </div>
     <script src="js/app.min.js"></script>
   </body>

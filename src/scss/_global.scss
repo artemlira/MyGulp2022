@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+.locked {
+  overflow: hidden;
+}
+
 //==================== Оболочка ====================
 .wrapper {
   width: 100%;
@@ -35,7 +39,8 @@ a {
 //==================== основная сетка ====================
 .container {
   max-width: $maxWidthContainer + px;
-  margin: 0 auto;
+  padding-inline: 20px;
+  margin-inline: auto;
 
   @include netbook {
     max-width: $netbook + px;
