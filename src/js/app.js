@@ -1,6 +1,7 @@
 import * as flsFunctions from "./modules/functions.js";
 import burgerMenu from "./modules/burger-menu.js"; //для бургер меню
 // import accordion from "./modules/accordion.js"; // для аккордиона
+// import tabs from "./modules/tabs.js"; // для табов
 
 flsFunctions.isWebp();
 burgerMenu(); //для бургер меню
@@ -39,3 +40,15 @@ burgerMenu(); //для бургер меню
 //   //   delay: 1800,
 //   // }
 // });
+
+// ==================== phone mask ====================
+// Ссылка на плагин: https://imask.js.org/
+// Подключение через npm: https://www.npmjs.com/package/imask
+//Подключение через CDN: <script src="https://unpkg.com/imask"></script>
+
+// const maskElement = document.querySelector(".phone__input"),
+//   maskOptions = { mask: "+{38}(000)000-00-00" },
+//   mask = IMask(maskElement, maskOptions);
+
+// ==================== Переключение табов ====================
+// tabs(".tabs__header", ".tabs__header-item", ".tabs__content-item", "active");

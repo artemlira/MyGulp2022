@@ -641,6 +641,33 @@ body {
   z-index: 3;
 }
 
+.tabs {
+  width: 100%;
+  margin-top: 150px;
+}
+
+.tabs__header {
+  display: flex;
+  justify-content: center;
+}
+
+.tabs__header-item {
+  margin: 0 25px;
+  cursor: pointer;
+}
+
+.tabs__header-item:active {
+  color: red;
+}
+
+.tabs__content {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 75px;
+}
+
 .footer {
   min-height: 200px;
   background-color: darkgrey;
@@ -717,6 +744,10 @@ body {
 @media screen and (max-width: 768px) {
   .container {
     max-width: 767.98px;
+  }
+
+  .tabs__header {
+    flex-wrap: wrap;
   }
 }
 
