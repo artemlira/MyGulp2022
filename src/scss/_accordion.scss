@@ -1,56 +1,88 @@
-.accodrion {
+// ==================== accordion ====================
+.accordion {
+  // .accordion__item
   &__item {
     border-bottom: 1px solid #c4c4c4;
+  }
 
-    .accordion__item-trigger {
-      display: flex;
-      padding: 20px 0;
-      align-items: center;
-      cursor: pointer;
+  //==================== оболочка заголовока аккордиона ====================
+  // .accordion__item-trigger
+  &__item-trigger {
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+    cursor: pointer;
+  }
 
-      .trigger__text {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 22px;
-        letter-spacing: 0.035em;
-        color: black;
-        margin-left: 10px;
-      }
-      .trigger__img {
-        position: relative;
-        margin-left: auto;
+  // ==================== оболочка контента аккордиона ====================
+  // .accordion__item-content
+  &__item-content {
+    padding-bottom: 20px;
+    display: none;
+    animation: fade 0.3s ease;
+  }
+}
 
-        .trigger__line-1 {
-          display: block;
-          width: 18px;
-          height: 2px;
-          background-color: black;
-          border-radius: 100px;
-        }
+// ==================== открытый (активный) аккордион ====================
+.accordion__item.active {
+  .accordion__item-content {
+    display: block;
+  }
+  .trigger__line-2 {
+    opacity: 0;
+  }
+}
 
-        .trigger__line-2 {
-          transform: rotate(0) !important;
-          transition: 0.1s transform ease;
-        }
+.trigger {
+  // ==================== Заголовок ====================
+  // .trigger__text
+  &__text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.035em;
+    color: black;
+    margin-left: 10px;
+  }
 
-        .trigger__line-1{
-          opacity: 0;
-          transition: 0.1s all ease;
-        }
-      }
-    }
-    .accordion__item-content {
-      padding-bottom: 20px;
-      display: none;
-      animation: fade 0.3s ease;
+  // ==================== иконка аккордиона ====================
+  // .trigger__img
+  &__img {
+    position: relative;
+    margin-left: auto;
+  }
 
-      .content__text {
-        margin: 10px;
-        &:first-child {
-          margin-top: 0;
-        }
-      }
+  // .trigger__line-1
+  &__line-1 {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: black;
+    border-radius: 100px;
+    transform: translateY(50%);
+    transition: 0.1s all ease;
+  }
+
+  // .trigger__line-2
+  &__line-2 {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(90deg);
+    transition: 0.1s all ease;
+  }
+}
+
+.content {
+  // ==================== текст аккордиона ====================
+  // .content__text
+  &__text {
+    font-style: italic;
+    margin: 10px;
+    &:first-child {
+      margin-top: 0;
     }
   }
 }

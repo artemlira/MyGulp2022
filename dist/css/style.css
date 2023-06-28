@@ -485,12 +485,20 @@ a {
   overflow: hidden;
 }
 
-.wrapper {
+html {
+  height: 100%;
+}
+
+body {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+
+.main {
+  flex: 1 0 auto;
 }
 
 @keyframes fade {
@@ -511,6 +519,7 @@ a {
 
 .header {
   background-color: grey;
+  flex: 0 0 auto;
 }
 
 .header.fixed {
@@ -630,64 +639,6 @@ a {
   display: none;
   background-color: transparent;
   z-index: 3;
-}
-
-.accodrion__item {
-  border-bottom: 1px solid #c4c4c4;
-}
-
-.accodrion__item .accordion__item-trigger {
-  display: flex;
-  padding: 20px 0;
-  align-items: center;
-  cursor: pointer;
-}
-
-.accodrion__item .accordion__item-trigger .trigger__text {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: 0.035em;
-  color: black;
-  margin-left: 10px;
-}
-
-.accodrion__item .accordion__item-trigger .trigger__img {
-  position: relative;
-  margin-left: auto;
-}
-
-.accodrion__item .accordion__item-trigger .trigger__img .trigger__line-1 {
-  display: block;
-  width: 18px;
-  height: 2px;
-  background-color: black;
-  border-radius: 100px;
-}
-
-.accodrion__item .accordion__item-trigger .trigger__img .trigger__line-2 {
-  transform: rotate(0) !important;
-  transition: 0.1s transform ease;
-}
-
-.accodrion__item .accordion__item-trigger .trigger__img .trigger__line-1 {
-  opacity: 0;
-  transition: 0.1s all ease;
-}
-
-.accodrion__item .accordion__item-content {
-  padding-bottom: 20px;
-  display: none;
-  animation: fade 0.3s ease;
-}
-
-.accodrion__item .accordion__item-content .content__text {
-  margin: 10px;
-}
-
-.accodrion__item .accordion__item-content .content__text:first-child {
-  margin-top: 0;
 }
 
 .form-wrapper {
@@ -872,6 +823,12 @@ a {
 
 .checkbox-form__input:focus-visible + .checkbox-form__text::before {
   outline: 1px solid #fff;
+}
+
+.footer {
+  min-height: 200px;
+  background-color: darkgrey;
+  flex: 0 0 auto;
 }
 
 @media screen and (max-width: 992px) {

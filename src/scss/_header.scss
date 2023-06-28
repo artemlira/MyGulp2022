@@ -2,6 +2,7 @@
 
 .header {
   background-color: grey;
+  flex: 0 0 auto;
 
   &.fixed {
     position: fixed;

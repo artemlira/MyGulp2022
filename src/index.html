@@ -3,13 +3,12 @@
   @@include('html/_head.html', { "title":"Название сайта" })
 
   <body>
-    <div class="wrapper">
-      @@include('html/_header.html',{})
-      <main class="page">
-       
-      </main>
-      @@include('html/_footer.html',{})
-    </div>
-    @@include('html/_js.html', {})
+    @@include('html/_header.html',{})
+    <main class="main">
+      <div class="main-container container">
+        <h1>Swiper</h1>
+      </div>
+    </main>
+    @@include('html/_footer.html',{}) @@include('html/_js.html', {})
   </body>
 </html>
