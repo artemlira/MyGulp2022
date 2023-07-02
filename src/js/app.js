@@ -1,11 +1,13 @@
 import * as flsFunctions from "./modules/functions.js";
 import burgerMenu from "./modules/burger-menu.js"; //для бургер меню
+import select from "./modules/select.js";
 // import accordion from "./modules/accordion.js"; // для аккордиона
 // import tabs from "./modules/tabs.js"; // для табов
 
 flsFunctions.isWebp();
 burgerMenu(); //для бургер меню
 // accordion(); // для аккордиона
+select(); // для селекта
 
 // ==================== Swiper slider ====================
 //Подключение по CDN
