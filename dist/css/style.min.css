@@ -822,18 +822,6 @@ body {
     animation: moveBotLine 0.4s forwards;
   }
 
-  .burger::before {
-    animation: moveTopLineRev 0.4s forwards;
-  }
-
-  .burger span {
-    animation: moveMidLineRev 0.4s forwards;
-  }
-
-  .burger::after {
-    animation: moveBotLineRev 0.4s forwards;
-  }
-
 @keyframes moveTopLine {
     0% {
       transform: scale(1);

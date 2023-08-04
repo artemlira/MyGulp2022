@@ -177,17 +177,17 @@
       }
     }
 
-    & {
-      &::before {
-        animation: moveTopLineRev 0.4s forwards;
-      }
-      & span {
-        animation: moveMidLineRev 0.4s forwards;
-      }
-      &::after {
-        animation: moveBotLineRev 0.4s forwards;
-      }
-    }
+    // & {
+    //   &::before {
+    //     animation: moveTopLineRev 0.4s forwards;
+    //   }
+    //   & span {
+    //     animation: moveMidLineRev 0.4s forwards;
+    //   }
+    //   &::after {
+    //     animation: moveBotLineRev 0.4s forwards;
+    //   }
+    // }
 
     @keyframes moveTopLine {
       0% {
